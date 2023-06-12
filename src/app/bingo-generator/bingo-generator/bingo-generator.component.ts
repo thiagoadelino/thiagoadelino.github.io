@@ -24,7 +24,7 @@ export class BingoGeneratorComponent {
   }
   //cartelas: string[] = ['1','2'];
   ngOnInit(): void {
-      this.cartelas = this.bingoGeneratorService.gerarListaCartelas(200);
+      this.cartelas = this.bingoGeneratorService.gerarListaCartelas(1);
   }
 
 }

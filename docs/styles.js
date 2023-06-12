@@ -44,7 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */", "",{"version":3,"sources":["webpack://src/styles.scss"],"names":[],"mappings":"AAAA,8EAAA","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\n@tailwind base;\n@tailwind components;\n@tailwind utilities;", "",{"version":3,"sources":["webpack://src/styles.scss","webpack://node_modules/tailwindcss/base.css","webpack://node_modules/tailwindcss/components.css","webpack://node_modules/tailwindcss/utilities.css"],"names":[],"mappings":"AAAA,8EAAA;ACAA,cAAA;ACAA,oBAAA;ACAA,mBAAA","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n@import 'tailwindcss/base';\n@import 'tailwindcss/components';\n@import 'tailwindcss/utilities';","@tailwind base;\n","@tailwind components;\n","@tailwind utilities;\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
