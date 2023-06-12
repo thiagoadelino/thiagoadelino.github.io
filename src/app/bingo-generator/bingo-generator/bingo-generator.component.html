@@ -1,0 +1,46 @@
+    <form>
+        Quantidade:<input [(ngModel)]="quantidade" name="quantidade"/>
+        <button (click)="generate()">Gerar</button>
+    </form>
+    <table class="table table-striped">
+        <tbody *ngFor="let c of cartelas">
+            <tr scope="row">
+                <td>  
+                    <tr>B</tr>
+                    <tr *ngFor="let b of c.b">
+                        <td>{{b}}</td>
+                    </tr>
+
+                </td>
+                <td>  
+                    <tr>I</tr>
+                    <tr *ngFor="let i of c.i">
+                        <td>{{i}}</td>
+                    </tr>
+
+                </td>
+                <td>  
+                    <tr>N</tr>
+                    <tr *ngFor="let n of c.n">
+                        <td>{{n}}</td>
+                    </tr>
+
+                </td>
+                <td>  
+                    <tr>G</tr>
+                    <tr *ngFor="let g of c.g">
+                        <td>{{g}}</td>
+                    </tr>
+
+                </td>
+                <td>  
+                    <tr>O</tr>
+                    <tr *ngFor="let o of c.o">
+                        <td>{{o}}</td>
+                    </tr>
+
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>

@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//import { BingoGeneratorModule } from './bingo-generator/bingo-generator.module';
+import { BingoGeneratorComponent } from './bingo-generator/bingo-generator/bingo-generator.component';
+import { BingoGeneratorService } from './bingo-generator/service/bingo-generator.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BingoGeneratorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    //BingoGeneratorModule
   ],
-  providers: [],
+  providers: [BingoGeneratorService],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
