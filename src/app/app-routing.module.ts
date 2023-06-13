@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BingoGeneratorComponent } from './bingo-generator/bingo-generator/bingo-generator.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/bingo-generator', pathMatch: 'full' },
   {path: 'bingo-generator' , component: BingoGeneratorComponent}
 ];
 
