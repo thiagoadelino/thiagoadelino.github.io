@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { BingoGeneratorComponent } from './bingo-generator/bingo-generator/bingo-generator.component';
 import { BingoGeneratorService } from './bingo-generator/service/bingo-generator.service';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BingoCardComponent } from './bingo-generator/bingo-card/bingo-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BingoGeneratorComponent
+    BingoGeneratorComponent,
+    BingoCardComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

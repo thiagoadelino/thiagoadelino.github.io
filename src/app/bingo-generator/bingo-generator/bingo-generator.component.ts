@@ -16,15 +16,23 @@ export class BingoGeneratorComponent {
   cartelas: Array<Cartela>;
 
   @Input()
-  quantidade: number;
+  quantidade: number = 1;
+
+  continue: boolean = true;
   
   generate(){
     if(this.quantidade)
       this.cartelas = this.bingoGeneratorService.gerarListaCartelas(this.quantidade);
+    this.continue = false;
   }
-  //cartelas: string[] = ['1','2'];
+  
   ngOnInit(): void {
-      this.cartelas = this.bingoGeneratorService.gerarListaCartelas(1);
+    setInterval(() => {
+      if(this.continue){
+        if(this.quantidade)
+          this.cartelas = this.bingoGeneratorService.gerarListaCartelas(this.quantidade);
+      }
+    },500);
   }
 
 }

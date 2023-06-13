@@ -1,40 +1,12 @@
-    <form>
-        Quantidade:<input [(ngModel)]="quantidade" name="quantidade"/>
-        <button (click)="generate()">Gerar</button>
-    </form>
-    <div class="card" *ngFor="let c of cartelas">
-        <div class="container text-center" >
-            <div class="row row-cols-5">
-                <div class="col">
-                    <div class="row center"><span>B</span></div>
-                    <div class="row center" *ngFor="let b of c.b">
-                        <span>{{b}}</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row center"><span>I</span></div>
-                    <div class="row center" *ngFor="let b of c.i">
-                        <span>{{b}}</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row center"><span>N</span></div>
-                    <div class="row center" *ngFor="let b of c.n">
-                        <span>{{b}}</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row center"><span>G</span></div>
-                    <div class="row center" *ngFor="let b of c.g">
-                        <span>{{b}}</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row center"><span>O</span></div>
-                    <div class="row center" *ngFor="let b of c.o">
-                        <span>{{b}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="cartela">
+<form>
+    Quantidade:<input [(ngModel)]="quantidade" name="quantidade"/>
+    <button (click)="generate()">Gerar</button>
+</form>
+</div>
+<div class="cartela">
+    <div *ngFor="let c of cartelas" class="card">
+        <app-bingo-card [cartela]="c"></app-bingo-card>
     </div>
+
+</div>
